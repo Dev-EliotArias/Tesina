@@ -1,0 +1,252 @@
+\documentclass[stu, 12pt, letterpaper, donotrepeattitle, floatsintext, natbib]{apa7}
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+\usepackage{marvosym}
+\usepackage{graphicx}
+
+\usepackage[normalem]{ulem}
+\usepackage[spanish]{babel} 
+\usepackage{ragged2e}
+\usepackage{xspace}
+\usepackage{svg}
+\usepackage{newtxtext}
+\usepackage{colortbl}
+
+%formulas
+\usepackage{amsmath}
+
+%tabla multi hoja
+\usepackage{longtable}
+
+%para bibliografia
+\usepackage{url}  % Para manejar correctamente las URLs en la bibliografía
+\usepackage{hyperref} % Para enlaces clicables en la versión digital
+
+%Ajustar tablas :v
+\usepackage{adjustbox}
+
+%paquetes para las tablas
+\definecolor{ChetwodeBlue}{rgb}{0.556,0.662,0.858}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+\usepackage[flushleft]{threeparttable}
+\usepackage{float}
+
+%configuracion de los espacios entre titulos
+\usepackage{titlesec}
+
+%\titlespacing{\subsection}{0pt}{12pt plus 1ex minus 0.2ex}{0pt plus 0.2ex} % Espaciado solo antes de \subsection
+%\titlespacing{\subsubsection}{0pt}{12pt plus 1ex minus 0.2ex}{0pt plus 0.2ex} % Espaciado solo antes de \subsubsection
+
+
+
+% Mantener el centrado de los títulos de nivel 1
+%\titleformat{\section}
+%  {\normalfont\large\bfseries\centering}{\thesection}{1em}{}
+%\titlespacing{\section}{0pt}{0.0ex plus 0.5ex minus .2ex}{1.5ex plus .2ex}
+
+% Configurar espaciado de los títulos de nivel 2 (\subsection)
+%\titleformat{\subsection}
+%  {\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+%\titlespacing{\subsection}{0pt}{12pt plus 1ex minus 0.2ex}{0pt plus 0.2ex}
+
+% Configurar espaciado de los títulos de nivel 3 (\subsubsection)
+%\titleformat{\subsubsection}
+%  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+%\titlespacing{\subsubsection}{0pt}{12pt plus 1ex minus 0.2ex}{0pt plus 0.2ex}
+
+%Cambiar de Figura a Diagrama:
+\addto\captionsspanish{\renewcommand{\figurename}{Diagrama}}
+
+%Cambiar de Cuadro a Tablas:
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+
+%para poner paginas en horizontal
+\usepackage{pdflscape}
+
+
+%para combinar las listas
+%\usepackage{floatrow}
+\usepackage{caption}
+
+%para la ref de tablas
+%\newcommand{\tableref}[1]{Tabla~\ref{#1}}
+
+%caption de tablas*
+%\addto\captionsspanish{\renewcommand{\listtablename}{Índice de tablas}}
+
+%indice
+%\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+
+%Espaciado doble
+\usepackage{setspace}
+\doublespacing
+
+\usepackage{caption} % Para personalizar los títulos de las figuras
+\usepackage{enumitem} % Para ajustar la sangría de las listas
+\usepackage{changepage} % Para ajustar temporalmente el margen
+
+\fancyhf{}
+\cfoot{\thepage}
+
+\selectlanguage{spanish}
+\useunder{\uline}{\ul}{}
+%\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+% Portada
+%\thispagestyle{empty}
+
+\begin{document}
+
+\begin{titlepage}
+	\begin{center}
+		\includegraphics[width=6cm]{imagenes/senati.png}\\
+		\vspace*{0.5cm}
+		\textbf{SERVICIO NACIONAL DE ADIESTRAMIENTO EN TRABAJO INDUSTRIAL}\\
+		\vspace*{1.5cm}
+		\textbf{DIRECCIÓN ZONAL: AREQUIPA - PUNO}\\
+		\textbf{Escuela/CFP: Escuela de Tecnologias de la Información}\\
+		\textbf{Carrera: Ingenieria de Software con Inteligencia Artificial}\\
+		\vspace*{1.8cm}
+		\textbf{Proyecto de Innovación / Mejora / Creatividad\\Nivel Profesional Técnico / Técnico Operativo}\\
+		\vspace*{1.7cm}
+		\textbf{\LARGE Optimización y automatización de la gestión de datos e información para talleres mecánicos}\\
+		\vspace*{1cm}
+		\textbf{Autor:    ELIOT ROY ARIAS FLORES}\\
+		\textbf{Asesor:    CESAR ROSAS ARAGÓN}\\
+		\vspace*{1.5cm}
+		Arequipa, Perú\\
+		\textbf{2024}
+
+	\end{center}
+
+\end{titlepage}
+
+
+\justifying
+\setlength{\parindent}{1.27cm}
+
+
+\pagenumbering{roman}
+%Codigo para evitar la separación silabica:
+\pretolerance=10000
+\tolerance=100
+\emergencystretch=5pt
+%posdata funcion <3 
+
+%------------dedicatoria------------
+\newpage
+\begin{justify}
+	\begin{flushright}
+		\textit{ } \\
+		%\vfill
+		\begin{minipage}{0.6\textwidth} % Limitar el ancho al 60% del ancho de la página
+
+			\textit{DEDICATORIA} \\
+			\textit{Dedico este trabajo a mi madre y mi familia que me apoyaron durante el proceso de aprendizaje y formación, este proyecto es el primer paso hacia el éxito profesional}
+		\end{minipage}
+	\end{flushright}
+\end{justify}
+%------------Agradecimiento------------
+\newpage
+\begin{justify}
+	\begin{flushright}
+		\textit{ } \\
+		%\vfill
+		\begin{minipage}{0.6\textwidth} % Limitar el ancho al 60% del ancho de la página
+
+			\textit{AGRADECIMIENTO} \\
+			\textit{Agradezco a mi familia por el apoyo durante la carrera, a mis instructores que me aconcejaron para alcanzar mis metas, a las empresas que me abrieron sus puertas para poder hacer mis practicas.}
+		\end{minipage}
+	\end{flushright}
+\end{justify}
+
+%---------Hoja de presentación----------
+\input{Capitulos/hojaEstudiante}
+
+%-----------RESUMEN EJECUTIVO-----------
+\newpage
+\input{Capitulos/resumenEjecutivo}
+%----------INDICE------------
+\newpage
+%\pagenumbering{roman}
+% Contenido
+\renewcommand{\contentsname}{Índice de contenido}
+\tableofcontents
+\setcounter{tocdepth}{1}
+
+
+
+% Fíguras a diagramas
+\renewcommand{\listfigurename}{Índice de diagramas}
+\newpage
+\listoffigures
+%\listoffigures
+
+% Tablas 
+\renewcommand{\listtablename}{Índice de tablas}
+\newpage
+\listoftables
+
+% Cuerpo
+%\pagenumbering{arabic}
+
+
+\newpage
+\pagenumbering{arabic}
+
+
+
+
+%-----------CAPITULO 1-----------
+\input{Capitulos/capitulo1}
+%-----------CAPITULO 2-----------
+\input{Capitulos/capitulo2}
+%-----------CAPITULO 3-----------
+\input{Capitulos/capitulo3}
+%-----------CAPITULO 4-----------
+\input{Capitulos/capitulo4}
+%-----------CAPITULO 5-----------
+\input{Capitulos/capitulo5}
+%-----------CAPITULO 6-----------
+\input{Capitulos/capitulo6}
+%-----------CAPITULO 7-----------
+\input{Capitulos/capitulo7}
+%-----------CAPITULO 8-----------
+\input{Capitulos/capitulo8}
+
+
+%Esto es solo para las referencias
+\pretolerance=8000   % Reducir el valor puede permitir más separación de palabras antes de la justificación.
+\tolerance=1000     % Aumentar el valor puede permitir una mayor flexibilidad en la separación.
+\emergencystretch=5pt % Permitir un pequeño estiramiento para mejorar la justificación.
+
+
+%\newpage
+% Referencias
+%\raggedright
+\renewcommand\refname{\large\textbf{Referencias}}
+\bibliographystyle{plain}
+\bibliography{referencias}
+% para citar usar esto:
+%\noindent \maskCitet{}
+%autor y año en parentesis
+%\noindent \citep{}
+%autor afuera, año en parentesis
+%\noindent \citet{}
+
+
+%-----------Anexos-----------
+%\input{Capitulos/capitulo8}
+
+\end{document}
+
+
+
+%no va indice de figuras
+%no va el resumen ejecutivo
+%indice de diagramas 
+%indice de tablas
